@@ -17,7 +17,7 @@ class MockRedisLock(object):
         self.blocking_timeout = blocking_timeout
         self.thread_local = bool(thread_local)
 
-    def acquire(self, blocking=True):  # pylint: disable=R0201,W0613
+    def acquire(self, blocking=True, blocking_timeout=None):  # pylint: disable=R0201,W0613
         """Emulate acquire."""
 
         return True
